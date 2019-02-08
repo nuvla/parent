@@ -41,7 +41,7 @@
    ;; core languages
    ;;
 
-   [org.clojure/clojure "1.10.0"]                           ; defined also in SlipStream artifact
+   [org.clojure/clojure "1.10.0"]
    [org.clojure/clojurescript "1.10.516"]
 
    ;;
@@ -67,15 +67,15 @@
    [clojure-ini "0.0.2"]
    [commons-io "2.6"]
    [commons-logging "1.2"]
-   [commons-lang/commons-lang "2.6"]                        ; defined also in SlipStream artifact
-   [commons-codec/commons-codec "1.11"]                     ; defined also in SlipStream artifact
+   [commons-lang/commons-lang "2.6"]
+   [commons-codec/commons-codec "1.11"]
    [compojure "1.6.1"]
    [com.amazonaws/aws-java-sdk-s3 "1.11.490"]
    [com.andrewmcveigh/cljs-time "0.5.2"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.3"]
-   [com.jcraft/jsch "0.1.55"]                               ; defined also in SlipStream artifact
+   [com.jcraft/jsch "0.1.55"]
    [com.rpl/specter "1.1.2"]
    [com.taoensso/encore "2.105.0"]
    [com.taoensso/tempura "1.2.1"]
@@ -99,28 +99,22 @@
    [io.nervous/kvlt "0.1.5-20180119.082733-5"
     :exclusions [org.clojure/clojurescript]]
 
-   [javax.mail/mail "1.4.7" :scope "compile"]               ; defined also in SlipStream artifact
-   [javax.servlet/javax.servlet-api "4.0.1"]                ; defined also in SlipStream artifact
+   [javax.mail/mail "1.4.7" :scope "compile"]
+   [javax.servlet/javax.servlet-api "4.0.1"]
 
    [log4j "1.2.17"
     :exclusions [javax.mail/mail
                  javax.jms/jms
                  com.sun.jdmk/jmxtools
-                 com.sun.jmx/jmxri]]                        ; defined also in SlipStream artifact
-   [org.apache.logging.log4j/log4j-core "2.11.1"]           ; defined also in SlipStream artifact
-   [org.apache.logging.log4j/log4j-api "2.11.1"]            ; defined also in SlipStream artifact
+                 com.sun.jmx/jmxri]]
+   [org.apache.logging.log4j/log4j-core "2.11.1"]
+   [org.apache.logging.log4j/log4j-api "2.11.1"]
    [org.apache.logging.log4j/log4j-web "2.11.1"]
    [org.apache.httpcomponents/httpclient "4.5.6"]           ; force version used by clj-http
    [org.slf4j/slf4j-simple "1.7.25"]
 
    [me.raynes/fs "1.4.6"]
    [metosin/spec-tools "0.8.3"]
-   [metrics-clojure "2.10.0"]
-   [metrics-clojure-ring "2.10.0"]
-   [metrics-clojure-jvm "2.10.0"]
-   [metrics-clojure-graphite "2.10.0"]
-
-   [net.cgrand/moustache "1.1.0"]
 
    [org.clojure/data.xml "0.0.8"]
    [org.clojure/data.zip "0.1.2"]
@@ -130,19 +124,19 @@
    [org.clojure/data.json "0.2.6"]
    [org.clojure/java.classpath "0.3.0"]
    [org.clojure/core.async "0.4.490" :exclusions [org.clojure/tools.reader]]
-   [org.clojure/test.check "0.9.0" :scope "test"]           ; defined also in SlipStream artifact
-   [org.elasticsearch/elasticsearch "6.2.4"]                ; defined also in SlipStream artifact
+   [org.clojure/test.check "0.9.0" :scope "test"]
+   [org.elasticsearch/elasticsearch "6.2.4"]
    [org.elasticsearch.client/elasticsearch-rest-client "6.2.4"]
    [org.elasticsearch.client/elasticsearch-rest-client-sniffer "6.2.4"]
-   [org.elasticsearch.client/transport "6.2.4"]             ; defined also in SlipStream artifact
+   [org.elasticsearch.client/transport "6.2.4"]
    [org.elasticsearch.plugin/transport-netty4-client "6.2.4"]
    [org.elasticsearch.test/framework "6.2.4"
     :exclusions [com.carrotsearch.randomizedtesting/randomizedtesting-runner]]
 
    [org.json/json "20180813"]
    [org.slf4j/slf4j-api "1.7.25"]
-   [org.slf4j/slf4j-jdk14 "1.7.25"]                         ; defined also in SlipStream artifact
-   [org.slf4j/slf4j-log4j12 "1.7.25"]                       ; defined also in SlipStream artifact
+   [org.slf4j/slf4j-jdk14 "1.7.25"]
+   [org.slf4j/slf4j-log4j12 "1.7.25"]
 
    ;; version 2.12.0 must be specified when using zookeeper
    ;; v3.4.x.  Upgrades beyond that may allow/require a
@@ -160,8 +154,6 @@
    [ring/ring-codec "1.1.1"]
    [ring/ring-json "0.4.0"]
    [ring/ring-defaults "0.3.2"]
-
-   [superstring "3.0.0"]
 
    [zookeeper-clj "0.9.4"]
 
@@ -182,8 +174,6 @@
 
    ;; cljs testing; control options here
    [doo "0.1.11" :scope "test"]
-
-   [expectations "2.1.10" :scope "test"]                    ; defined also in SlipStream artifact
 
    [junit "4.12" :scope "test"]
 
