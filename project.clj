@@ -57,7 +57,6 @@
    [buddy/buddy-hashers "1.3.0"]
    [buddy/buddy-sign "3.0.0"]
 
-   [camel-snake-kebab "0.4.0"]
    [cc.qbits/spandex "0.6.4"]
    [cheshire "5.8.1"]                                       ;; newer, explicit version needed by ring-json
    [clj-commons/secretary "1.2.4"]                          ;; patched version for clojurescript 1.10.439
