@@ -74,7 +74,6 @@
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.3"]
-   [com.jcraft/jsch "0.1.55"]
    [com.rpl/specter "1.1.2"]
    [com.taoensso/encore "2.105.0"]
    [com.taoensso/tempura "1.2.1"]
