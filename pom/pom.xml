@@ -6,7 +6,7 @@
   <groupId>sixsq.nuvla.parent</groupId>
   <artifactId>pom</artifactId>
   <packaging>pom</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>parent/pom</name>
   <url>http://sixsq.com/</url>
 
