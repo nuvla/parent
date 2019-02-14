@@ -15,10 +15,57 @@ consistent, release version of this POM file.  For example,
 Normally, this reference appears in the top `pom.xml` file in a
 repository.
 
+## Prerequisites
 
-# Release
+Ensure that the version number in the POM file is updated according to
+the semantic versioning rules, taking into account changes since the
+last release.
 
-**To be written...**
+Before releasing a new version of the parent pom file, consider
+upgrading all the plugins to the latest versions:
+
+```sh
+mvn versions:display-plugin-updates
+```
+
+If necessary, upgrade any plugins (or the minimum maven version) and
+test that the builds work correctly.
+
+Push any changes you make to the master branch of the repository.
+
+## Release
+
+After pushing all changes, verify that the release will (likely) work:
+
+```sh
+mvn release:prepare -DdryRun=true
+```
+
+It will interactively ask for version and tags information.  The
+defaults are usually correct.
+
+If the above command fails, correct any problems that have been
+identified.  If it succeeded, then clean up the generated files:
+
+```sh
+mvn release:clean
+```
+
+You can then do the real release:
+
+```sh
+mvn release:prepare
+```
+
+You can add the option `--batch-mode` if the default responses to the
+questions were correct. Finally, do:
+
+```sh
+mvn release:perform
+```
+
+to finalize the release.  This uploads artifacts to the release
+repository and pushes tags to GitHub. 
 
 ## Copyright
 
