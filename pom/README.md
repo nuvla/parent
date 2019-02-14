@@ -58,14 +58,17 @@ mvn release:prepare
 ```
 
 You can add the option `--batch-mode` if the default responses to the
-questions were correct. Finally, do:
+questions were correct. This will push changes and tags into the
+GitHub repository.
+
+Finally, do:
 
 ```sh
 mvn release:perform
 ```
 
-to finalize the release.  This uploads artifacts to the release
-repository and pushes tags to GitHub. 
+to finalize the release. This builds the release artifacts and uploads
+them to the Nexus repository.
 
 ## Copyright
 
