@@ -223,6 +223,13 @@
         </executions>
       </plugin>
       
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <configuration>
+          <tagNameFormat>pom-v@{project.version}</tagNameFormat>
+        </configuration>
+      </plugin>
+
     </plugins>
   </build>
 
