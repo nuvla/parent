@@ -1,12 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>sixsq.nuvla.parent</groupId>
   <artifactId>pom</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>parent/pom</name>
   <url>http://sixsq.com/</url>
 
@@ -57,7 +56,7 @@
     <connection>${scm.read}/parent.git</connection>
     <developerConnection>${scm.write}/parent.git</developerConnection>
     <url>${scm.public}/parent</url>
-    <tag>HEAD</tag>
+    <tag>pom-v1.0.0</tag>
   </scm>
 
   <build>
