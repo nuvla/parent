@@ -5,7 +5,7 @@
   <groupId>sixsq.nuvla.parent</groupId>
   <artifactId>pom</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>parent/pom</name>
   <url>http://sixsq.com/</url>
 
@@ -56,7 +56,7 @@
     <connection>${scm.read}/parent.git</connection>
     <developerConnection>${scm.write}/parent.git</developerConnection>
     <url>${scm.public}/parent</url>
-    <tag>pom-v1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>
