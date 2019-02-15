@@ -1,4 +1,4 @@
-(defproject sixsq.nuvla/parent "6.0.1-SNAPSHOT"
+(defproject sixsq.nuvla/parent "6.1.0-SNAPSHOT"
 
   :description "parent project file for Nuvla modules"
 
@@ -42,7 +42,7 @@
    ;;
 
    [org.clojure/clojure "1.10.0"]
-   [org.clojure/clojurescript "1.10.516"]
+   [org.clojure/clojurescript "1.10.520"]
 
    ;;
    ;; general dependencies
@@ -63,31 +63,20 @@
    [clj-http "3.9.1"]
    [clj-stacktrace "0.2.8"]
    [clj-time "0.15.1"]
-   [clojure-ini "0.0.2"]
-   [commons-io "2.6"]
-   [commons-logging "1.2"]
-   [commons-lang/commons-lang "2.6"]
-   [commons-codec/commons-codec "1.11"]
    [compojure "1.6.1"]
-   [com.amazonaws/aws-java-sdk-s3 "1.11.490"]
-   [com.andrewmcveigh/cljs-time "0.5.2"]
+   [com.amazonaws/aws-java-sdk-s3 "1.11.499"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.3"]
    [com.rpl/specter "1.1.2"]
-   [com.taoensso/encore "2.105.0"]
    [com.taoensso/tempura "1.2.1"]
-   [com.taoensso/tower "3.1.0-beta5"]
    [org.clojure/tools.reader "1.3.2"]
 
-   ;; Pinned to this version because of a dependency conflict with the
-   ;; deprecated tower library used by SlipStreamUI.
-   [com.taoensso/timbre "4.7.4"]
+   [com.taoensso/timbre "4.10.0"]
 
    [day8.re-frame/http-fx "0.1.6"]
    [duratom "0.4.1"]
 
-   [enlive "1.1.6"]
    [environ "1.1.0"]
    [expound "0.7.2"]
 
@@ -97,26 +86,21 @@
    [io.nervous/kvlt "0.1.5-20180119.082733-5"
     :exclusions [org.clojure/clojurescript]]
 
-   [javax.mail/mail "1.4.7" :scope "compile"]
-   [javax.servlet/javax.servlet-api "4.0.1"]
-
    [log4j "1.2.17"
     :exclusions [javax.mail/mail
                  javax.jms/jms
                  com.sun.jdmk/jmxtools
                  com.sun.jmx/jmxri]]
-   [org.apache.logging.log4j/log4j-core "2.11.1"]
-   [org.apache.logging.log4j/log4j-api "2.11.1"]
-   [org.apache.logging.log4j/log4j-web "2.11.1"]
-   [org.apache.httpcomponents/httpclient "4.5.6"]           ; force version used by clj-http
+   [org.apache.logging.log4j/log4j-core "2.11.2"]
+   [org.apache.logging.log4j/log4j-api "2.11.2"]
+   [org.apache.logging.log4j/log4j-web "2.11.2"]
+   [org.apache.httpcomponents/httpclient "4.5.7"]           ; force version used by clj-http
    [org.slf4j/slf4j-simple "1.7.25"]
 
    [me.raynes/fs "1.4.6"]
    [metosin/spec-tools "0.8.3"]
 
    [org.clojure/data.xml "0.0.8"]
-   [org.clojure/data.zip "0.1.2"]
-   [org.clojure/tools.cli "0.4.1"]
    [org.clojure/tools.logging "0.4.1"]
    [org.clojure/tools.namespace "0.2.11"]
    [org.clojure/data.json "0.2.6"]
@@ -142,11 +126,8 @@
    ;; https://curator.apache.org/zk-compatibility.html
    [org.apache.curator/curator-test "2.12.0" :scope "test"]
 
-   [potemkin "0.4.5" :exclusions [riddley]]                 ; aleph needs a more recent version
-
    [reagent "0.8.1"]
    [re-frame "0.10.6"]
-   [riddley "0.2.0"]
    [ring "1.7.1"]
    [ring/ring-core "1.7.1" :exclusions [commons-io]]        ; clj-http needs a more recent version
    [ring/ring-codec "1.1.1"]
@@ -173,43 +154,22 @@
    ;; cljs testing; control options here
    [doo "0.1.11" :scope "test"]
 
-   [junit "4.12" :scope "test"]
-
-   [org.clojure/tools.nrepl "0.2.13" :scope "test"
-    :exclusions [org.clojure/clojure]]
-
    [peridot "0.5.1" :scope "test"]
 
-   [thheller/shadow-cljs "2.7.25"]
+   [thheller/shadow-cljs "2.7.36"]
    ]
 
   :repositories
-  [
-   ["third-party" {:url           "https://nexus.sixsq.com/content/repositories/thirdparty/"
-                   :snapshots     false
-                   :sign-releases false
-                   :checksum      :fail
-                   :update        :daily}]
-   ["community-snapshots" {:url           "https://nexus.sixsq.com/content/repositories/snapshots-community-rhel7/"
-                           :snapshots     true
-                           :sign-releases false
-                           :checksum      :fail
-                           :update        :always}]
-   ["community-releases" {:url           "https://nexus.sixsq.com/content/repositories/releases-community-rhel7/"
-                          :snapshots     false
-                          :sign-releases false
-                          :checksum      :fail
-                          :update        :daily}]
-   ["enterprise-snapshots" {:url           "https://nexus.sixsq.com/content/repositories/snapshots-enterprise-rhel7/"
-                            :snapshots     true
-                            :sign-releases false
-                            :checksum      :fail
-                            :update        :always}]
-   ["enterprise-releases" {:url           "https://nexus.sixsq.com/content/repositories/releases-enterprise-rhel7/"
-                           :snapshots     false
-                           :sign-releases false
-                           :checksum      :fail
-                           :update        :daily}]]
+  [["nuvla-snapshots" {:url           "https://nexus.sixsq.com/content/repositories/nuvla-snapshots/"
+                       :snapshots     true
+                       :sign-releases false
+                       :checksum      :fail
+                       :update        :always}]
+   ["nuvla-releases" {:url           "https://nexus.sixsq.com/content/repositories/nuvla-releases/"
+                      :snapshots     false
+                      :sign-releases false
+                      :checksum      :fail
+                      :update        :daily}]]
 
 
   :deploy-repositories
@@ -217,15 +177,14 @@
                :username :env/clojars_username
                :password :env/clojars_password
                :signing  {:gpg-key "SixSq Release Manager <admin@sixsq.com>"}}]
-
-   ["snapshots" {:url           "https://nexus.sixsq.com/content/repositories/snapshots-community-rhel7/"
+   ["snapshots" {:url           "https://nexus.sixsq.com/content/repositories/nuvla-snapshots/"
                  :username      :env/sixsq_nexus_username
                  :password      :env/sixsq_nexus_password
                  :snapshots     true
                  :sign-releases false
                  :checksum      :fail
                  :update        :always}]
-   ["releases" {:url           "https://nexus.sixsq.com/content/repositories/releases-community-rhel7/"
+   ["releases" {:url           "https://nexus.sixsq.com/content/repositories/nuvla-releases/"
                 :username      :env/sixsq_nexus_username
                 :password      :env/sixsq_nexus_password
                 :snapshots     false

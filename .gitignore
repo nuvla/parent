@@ -2,6 +2,8 @@ target
 *.iml
 .idea
 
+.lein*
+
 pom.xml.next
 pom.xml.releaseBackup
 pom.xml.tag
