@@ -35,6 +35,8 @@
                   ["vcs" "commit"]
                   ["vcs" "push"]]
 
+  :vcs :git
+
   :managed-dependencies
   [
    ;;
