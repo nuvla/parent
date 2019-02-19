@@ -5,7 +5,7 @@
   <groupId>sixsq.nuvla.parent</groupId>
   <artifactId>pom</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <name>parent/pom</name>
   <url>http://sixsq.com/</url>
 
@@ -17,11 +17,6 @@
     <scm.read>scm:git:https://github.com/nuvla</scm.read>
     <scm.write>scm:git:ssh://git@github.com/nuvla</scm.write>
     <scm.public>https://github.com/nuvla</scm.public>
-
-    <!-- root URL for the nexus repositories         -->
-    <!-- The value should NOT have a trailing slash! -->
-    <nexus>https://nexus.sixsq.com/content/repositories</nexus>
-    <nexus.thirdparty>https://nexus.sixsq.com/content/repositories</nexus.thirdparty>
   </properties>
 
   <repositories>
@@ -35,7 +30,7 @@
       </snapshots>
       <id>nuvla.releases</id>
       <name>Nuvla Releases</name>
-      <url>${nexus}/releases</url>
+      <url>s3://sixsq-artifact-releases/nuvla</url>
     </repository>
 
     <repository>
@@ -47,7 +42,7 @@
       </snapshots>
       <id>nuvla.snapshots</id>
       <name>Nuvla Snapshots</name>
-      <url>${nexus}/snapshots</url>
+      <url>s3://sixsq-artifact-snapshots/nuvla</url>
     </repository>
 
   </repositories>
@@ -62,12 +57,21 @@
   <build>
 
     <extensions>
+      
       <!-- provide build time details for modules and plugins -->
       <extension>
         <groupId>co.leantechniques</groupId>
         <artifactId>maven-buildtime-extension</artifactId>
         <version>2.0.1</version>
       </extension>
+
+      <!-- allows use of S3 for artifacts -->
+      <extension>
+        <groupId>com.gkatzioura.maven.cloud</groupId>
+        <artifactId>s3-storage-wagon</artifactId>
+        <version>1.8</version>
+      </extension>
+
     </extensions>
 
     <pluginManagement>
@@ -164,6 +168,31 @@
 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
+        <artifactId>properties-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>set-system-properties</goal>
+            </goals>
+            <configuration>
+              <properties>
+                <property>
+                  <name>S3_ENDPOINT</name>
+                  <value>https://sos-ch-gva-2.exo.io</value>
+                </property>
+                <property>
+                  <name>AWS_DEFAULT_REGION</name>
+                  <value>ch-gva-2</value>
+                </property>                
+              </properties>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
         <executions>
           <execution>
@@ -236,13 +265,13 @@
     <repository>
       <id>nuvla.releases</id>
       <name>Nuvla Releases</name>
-      <url>${nexus}/nuvla-releases</url>
+      <url>s3://sixsq-artifact-releases/nuvla</url>
     </repository>
 
     <snapshotRepository>
       <id>nuvla.snapshots</id>
       <name>Nuvla Snapshots</name>
-      <url>${nexus}/nuvla-snapshots</url>
+      <url>s3://sixsq-artifact-snapshots/nuvla</url>
     </snapshotRepository>
   </distributionManagement>
 
