@@ -80,7 +80,8 @@
    [environ "1.1.0"]
    [expound "0.7.2"]
 
-   [funcool/promesa "2.0.0"]
+   ;; version 2.0.0 causes compilation failures, check before upgrade
+   [funcool/promesa "1.9.0"]
 
    [instaparse "1.4.10"]
    [io.nervous/kvlt "0.1.5-20180119.082733-5"
