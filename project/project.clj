@@ -1,4 +1,4 @@
-(defproject sixsq.nuvla/parent "6.1.3"
+(defproject sixsq.nuvla/parent "6.1.4-SNAPSHOT"
 
   :description "parent project file for Nuvla modules"
 
