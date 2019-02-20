@@ -9,17 +9,15 @@
             :distribution :repo}
 
   :plugins [[jonase/eastwood "0.2.5"]
-            [kirasystems/lein-codox "0.10.4"]
             ;; FIXME update to lein-codox (remove kirasystems) after fix of
             ;; https://github.com/sattvik/leinjacker/issues/14
             ;; (leinjacker 0.4.3 is published and lein-codox update their leinjacker dependency to 0.4.3)
+            [kirasystems/lein-codox "0.10.4"]
             [lein-ancient "0.6.15"]
-            [lein-environ "1.1.0"]
             [lein-kibit "0.1.6"]
-            [lein-licenses "0.2.2"]
             [lein-nsorg "0.1.4"]
-            [lein-shell "0.5.0"]
-            [com.livingsocial/lein-dependency-check "1.0.2"]]
+            [s3-wagon-private "1.3.2"]
+            [lein-shell "0.5.0"]]
 
   :filespecs [{:type :path
                :path "./project.clj"}]
@@ -66,7 +64,7 @@
    [clj-stacktrace "0.2.8"]
    [clj-time "0.15.1"]
    [compojure "1.6.1"]
-   [com.amazonaws/aws-java-sdk-s3 "1.11.499"]
+   [com.amazonaws/aws-java-sdk-s3 "1.11.502"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.3"]
@@ -82,7 +80,7 @@
    [environ "1.1.0"]
    [expound "0.7.2"]
 
-   [funcool/promesa "1.9.0"]
+   [funcool/promesa "2.0.0"]
 
    [instaparse "1.4.10"]
    [io.nervous/kvlt "0.1.5-20180119.082733-5"
@@ -97,7 +95,7 @@
    [org.apache.logging.log4j/log4j-api "2.11.2"]
    [org.apache.logging.log4j/log4j-web "2.11.2"]
    [org.apache.httpcomponents/httpclient "4.5.7"]           ; force version used by clj-http
-   [org.slf4j/slf4j-simple "1.7.25"]
+   [org.slf4j/slf4j-simple "1.7.26"]
 
    [me.raynes/fs "1.4.6"]
    [metosin/spec-tools "0.8.3"]
@@ -118,9 +116,9 @@
     :exclusions [com.carrotsearch.randomizedtesting/randomizedtesting-runner]]
 
    [org.json/json "20180813"]
-   [org.slf4j/slf4j-api "1.7.25"]
-   [org.slf4j/slf4j-jdk14 "1.7.25"]
-   [org.slf4j/slf4j-log4j12 "1.7.25"]
+   [org.slf4j/slf4j-api "1.7.26"]
+   [org.slf4j/slf4j-jdk14 "1.7.26"]
+   [org.slf4j/slf4j-log4j12 "1.7.26"]
 
    ;; version 2.12.0 must be specified when using zookeeper
    ;; v3.4.x.  Upgrades beyond that may allow/require a
@@ -158,37 +156,36 @@
 
    [peridot "0.5.1" :scope "test"]
 
-   [thheller/shadow-cljs "2.7.36"]
+   [thheller/shadow-cljs "2.8.5"]
    ]
 
   :repositories
-  [["nuvla-snapshots" {:url           "https://nexus.sixsq.com/content/repositories/nuvla-snapshots/"
+  [["nuvla-snapshots" {:url           "https://sixsq-build-artifacts.s3.amazonaws.com/snapshots"
                        :snapshots     true
                        :sign-releases false
                        :checksum      :fail
                        :update        :always}]
-   ["nuvla-releases" {:url           "https://nexus.sixsq.com/content/repositories/nuvla-releases/"
+   ["nuvla-releases" {:url           "https://sixsq-build-artifacts.s3.amazonaws.com/releases"
                       :snapshots     false
                       :sign-releases false
                       :checksum      :fail
                       :update        :daily}]]
-
 
   :deploy-repositories
   [["clojars" {:url      "https://clojars.org/repo"
                :username :env/clojars_username
                :password :env/clojars_password
                :signing  {:gpg-key "SixSq Release Manager <admin@sixsq.com>"}}]
-   ["snapshots" {:url           "https://nexus.sixsq.com/content/repositories/nuvla-snapshots/"
-                 :username      :env/sixsq_nexus_username
-                 :password      :env/sixsq_nexus_password
+   ["snapshots" {:url           "s3p://sixsq-build-artifacts/snapshots"
+                 :username      :env/AWS_ACCESS_KEY_ID
+                 :passphrase    :env/AWS_SECRET_ACCESS_KEY
                  :snapshots     true
                  :sign-releases false
                  :checksum      :fail
                  :update        :always}]
-   ["releases" {:url           "https://nexus.sixsq.com/content/repositories/nuvla-releases/"
-                :username      :env/sixsq_nexus_username
-                :password      :env/sixsq_nexus_password
+   ["releases" {:url           "s3p://sixsq-build-artifacts/releases"
+                :username      :env/AWS_ACCESS_KEY_ID
+                :passphrase    :env/AWS_SECRET_ACCESS_KEY
                 :snapshots     false
                 :sign-releases false
                 :checksum      :fail
