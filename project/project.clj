@@ -161,12 +161,12 @@
    ]
 
   :repositories
-  [["nuvla-snapshots" {:url           "https://sixsq-build-artifacts.s3.amazonaws.com/snapshots"
+  [["nuvla-snapshots" {:url           "s3p://sixsq-build-artifacts/snapshots"
                        :snapshots     true
                        :sign-releases false
                        :checksum      :fail
                        :update        :always}]
-   ["nuvla-releases" {:url           "https://sixsq-build-artifacts.s3.amazonaws.com/releases"
+   ["nuvla-releases" {:url           "s3p://sixsq-build-artifacts/releases"
                       :snapshots     false
                       :sign-releases false
                       :checksum      :fail
