@@ -9,10 +9,6 @@
             :distribution :repo}
 
   :plugins [[jonase/eastwood "0.3.5"]
-            ;; FIXME update to lein-codox (remove kirasystems) after fix of
-            ;; https://github.com/sattvik/leinjacker/issues/14
-            ;; (leinjacker 0.4.3 is published and lein-codox update their leinjacker dependency to 0.4.3)
-            [kirasystems/lein-codox "0.10.4"]
             [lein-ancient "0.6.15"]
             [lein-kibit "0.1.6"]
             [lein-nsorg "0.2.0"]
