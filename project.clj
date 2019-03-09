@@ -11,7 +11,7 @@
   :plugins [[jonase/eastwood "0.3.5"]
             [lein-ancient "0.6.15"]
             [lein-kibit "0.1.6"]
-            [lein-nsorg "0.2.0"]
+            [lein-nsorg "0.3.0"]
             [s3-wagon-private "1.3.2"]
             [lein-shell "0.5.0"]]
 
@@ -47,7 +47,7 @@
 
    ;; be careful of upgrading; newer versions have a
    ;; netty conflict with elasticsearch
-   [aleph "0.4.4"]
+   [aleph "0.4.6"]
 
    [buddy/buddy-core "1.5.0"]
    [buddy/buddy-hashers "1.3.0"]
@@ -60,7 +60,7 @@
    [clj-stacktrace "0.2.8"]
    [clj-time "0.15.1"]
    [compojure "1.6.1"]
-   [com.amazonaws/aws-java-sdk-s3 "1.11.502"]
+   [com.amazonaws/aws-java-sdk-s3 "1.11.515"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.3"]
@@ -76,7 +76,7 @@
    [environ "1.1.0"]
    [expound "0.7.2"]
 
-   ;; version 2.0.0 causes compilation failures, check before upgrade
+   ;; version 2.0.0 causes compilation warnings, check before upgrade
    [funcool/promesa "1.9.0"]
 
    [instaparse "1.4.10"]
@@ -95,7 +95,7 @@
    [org.slf4j/slf4j-simple "1.7.26"]
 
    [me.raynes/fs "1.4.6"]
-   [metosin/spec-tools "0.8.3"]
+   [metosin/spec-tools "0.9.0"]
 
    [org.clojure/data.xml "0.0.8"]
    [org.clojure/tools.logging "0.4.1"]
@@ -104,12 +104,10 @@
    [org.clojure/java.classpath "0.3.0"]
    [org.clojure/core.async "0.4.490" :exclusions [org.clojure/tools.reader]]
    [org.clojure/test.check "0.9.0" :scope "test"]
-   [org.elasticsearch/elasticsearch "6.2.4"]
-   [org.elasticsearch.client/elasticsearch-rest-client "6.2.4"]
-   [org.elasticsearch.client/elasticsearch-rest-client-sniffer "6.2.4"]
-   [org.elasticsearch.client/transport "6.2.4"]
-   [org.elasticsearch.plugin/transport-netty4-client "6.2.4"]
-   [org.elasticsearch.test/framework "6.2.4"
+   [org.elasticsearch/elasticsearch "6.6.1"]
+   [org.elasticsearch.client/transport "6.6.1"]
+   [org.elasticsearch.plugin/transport-netty4-client "6.6.1"]
+   [org.elasticsearch.test/framework "6.6.1"
     :exclusions [com.carrotsearch.randomizedtesting/randomizedtesting-runner]]
 
    [org.json/json "20180813"]
@@ -146,23 +144,23 @@
    [clojure-complete "0.2.5" :scope "test"
     :exclusions [org.clojure/clojure]]
 
-   [com.google.javascript/closure-compiler-unshaded "v20190121"]
+   [com.google.javascript/closure-compiler-unshaded "v20190301"]
 
    ;; cljs testing; control options here
    [doo "0.1.11" :scope "test"]
 
    [peridot "0.5.1" :scope "test"]
 
-   [thheller/shadow-cljs "2.8.5"]
+   [thheller/shadow-cljs "2.8.15"]
    ]
 
   :repositories
-  [["nuvla-snapshots" {:url           "s3p://sixsq-build-artifacts/snapshots"
+  [["nuvla-snapshots" {:url           "s3://sixsq-build-artifacts/snapshots"
                        :snapshots     true
                        :sign-releases false
                        :checksum      :fail
                        :update        :always}]
-   ["nuvla-releases" {:url           "s3p://sixsq-build-artifacts/releases"
+   ["nuvla-releases" {:url           "s3://sixsq-build-artifacts/releases"
                       :snapshots     false
                       :sign-releases false
                       :checksum      :fail
