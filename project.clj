@@ -88,6 +88,7 @@
                  javax.jms/jms
                  com.sun.jdmk/jmxtools
                  com.sun.jmx/jmxri]]
+
    [org.apache.logging.log4j/log4j-core "2.11.2"]
    [org.apache.logging.log4j/log4j-api "2.11.2"]
    [org.apache.logging.log4j/log4j-web "2.11.2"]
@@ -97,7 +98,6 @@
    [me.raynes/fs "1.4.6"]
    [metosin/spec-tools "0.9.0"]
 
-   [org.clojure/data.xml "0.0.8"]
    [org.clojure/tools.logging "0.4.1"]
    [org.clojure/tools.namespace "0.2.11"]
    [org.clojure/data.json "0.2.6"]
@@ -110,9 +110,7 @@
    [org.elasticsearch.test/framework "6.6.1"
     :exclusions [com.carrotsearch.randomizedtesting/randomizedtesting-runner]]
 
-   [org.json/json "20180813"]
    [org.slf4j/slf4j-api "1.7.26"]
-   [org.slf4j/slf4j-jdk14 "1.7.26"]
    [org.slf4j/slf4j-log4j12 "1.7.26"]
 
    ;; version 2.12.0 must be specified when using zookeeper
@@ -134,6 +132,7 @@
    ;; when upgrading beyond 3.4.x, update curator version above
    [org.apache.zookeeper/zookeeper "3.4.13"
     :exclusions [jline
+                 org.slf4j/slf4j-api
                  org.slf4j/slf4j-log4j12]]
 
    ;;
