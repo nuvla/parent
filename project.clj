@@ -1,3 +1,5 @@
+(def es-version "7.0.0")
+
 (defproject sixsq.nuvla/parent "6.3.1-SNAPSHOT"
 
   :description "parent project file for Nuvla modules"
@@ -53,7 +55,7 @@
    [buddy/buddy-hashers "1.3.0"]
    [buddy/buddy-sign "3.0.0"]
 
-   [cc.qbits/spandex "0.6.4"]
+   [cc.qbits/spandex "0.7.0-beta3"]
    [cheshire "5.8.1"]                                       ;; newer, explicit version needed by ring-json
    [clj-commons/secretary "1.2.4"]                          ;; patched version for clojurescript 1.10.439
    [clj-http "3.9.1"]
@@ -104,10 +106,10 @@
    [org.clojure/java.classpath "0.3.0"]
    [org.clojure/core.async "0.4.490" :exclusions [org.clojure/tools.reader]]
    [org.clojure/test.check "0.9.0" :scope "test"]
-   [org.elasticsearch/elasticsearch "6.6.1"]
-   [org.elasticsearch.client/transport "6.6.1"]
-   [org.elasticsearch.plugin/transport-netty4-client "6.6.1"]
-   [org.elasticsearch.test/framework "6.6.1"
+   [org.elasticsearch/elasticsearch ~es-version]
+   [org.elasticsearch.client/transport ~es-version]
+   [org.elasticsearch.plugin/transport-netty4-client ~es-version]
+   [org.elasticsearch.test/framework ~es-version
     :exclusions [com.carrotsearch.randomizedtesting/randomizedtesting-runner]]
 
    [org.slf4j/slf4j-api "1.7.26"]
