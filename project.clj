@@ -1,4 +1,4 @@
-(defproject sixsq.nuvla/parent "6.2.1-SNAPSHOT"
+(defproject sixsq.nuvla/parent "6.3.0-SNAPSHOT"
 
   :description "parent project file for Nuvla modules"
 
@@ -60,7 +60,7 @@
    [clj-stacktrace "0.2.8"]
    [clj-time "0.15.1"]
    [compojure "1.6.1"]
-   [com.amazonaws/aws-java-sdk-s3 "1.11.515"]
+   [com.amazonaws/aws-java-sdk-s3 "1.11.534"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.3"]
@@ -71,7 +71,7 @@
    [com.taoensso/timbre "4.10.0"]
 
    [day8.re-frame/http-fx "0.1.6"]
-   [duratom "0.4.1"]
+   [duratom "0.4.2"]
 
    [environ "1.1.0"]
    [expound "0.7.2"]
@@ -92,11 +92,11 @@
    [org.apache.logging.log4j/log4j-core "2.11.2"]
    [org.apache.logging.log4j/log4j-api "2.11.2"]
    [org.apache.logging.log4j/log4j-web "2.11.2"]
-   [org.apache.httpcomponents/httpclient "4.5.7"]           ; force version used by clj-http
+   [org.apache.httpcomponents/httpclient "4.5.8"]           ; force version used by clj-http
    [org.slf4j/slf4j-simple "1.7.26"]
 
    [me.raynes/fs "1.4.6"]
-   [metosin/spec-tools "0.9.0"]
+   [metosin/spec-tools "0.9.1"]
 
    [org.clojure/tools.logging "0.4.1"]
    [org.clojure/tools.namespace "0.2.11"]
@@ -130,7 +130,7 @@
    [zookeeper-clj "0.9.4"]
 
    ;; when upgrading beyond 3.4.x, update curator version above
-   [org.apache.zookeeper/zookeeper "3.4.13"
+   [org.apache.zookeeper/zookeeper "3.4.14"
     :exclusions [jline
                  org.slf4j/slf4j-api
                  org.slf4j/slf4j-log4j12]]
@@ -154,12 +154,12 @@
    ]
 
   :repositories
-  [["nuvla-snapshots" {:url           "s3://sixsq-build-artifacts/snapshots"
+  [["nuvla-snapshots" {:url           "https://sixsq-build-artifacts.s3.amazonaws.com/snapshots"
                        :snapshots     true
                        :sign-releases false
                        :checksum      :fail
                        :update        :always}]
-   ["nuvla-releases" {:url           "s3://sixsq-build-artifacts/releases"
+   ["nuvla-releases" {:url           "https://sixsq-build-artifacts.s3.amazonaws.com/releases"
                       :snapshots     false
                       :sign-releases false
                       :checksum      :fail

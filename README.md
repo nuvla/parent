@@ -37,13 +37,16 @@ means that the above environmental variable is not set.
 
 # Release
 
-**Be sure that you've done all of the setup in the previous section!**
+**Before** creating the release:
 
-To release this to clojars, just run the command:
+ - **Be sure that you've done all of the setup in the previous
+   section!**
 
-    lein release :patch
+ - Decide what semantic version to use for this release and change the
+   version in `project.clj`. (It should still have the "-SNAPSHOT"
+   suffix.) 
 
-This will bump the patch version of the artifact.
+ - Update the changelog.
 
 In general, use the following guidelines when choosing how to change
 the version:
@@ -54,8 +57,19 @@ the version:
    dependencies or delete dependencies
  - :major for major changes such as changing repository definitions
 
-After releasing a new version on clojars, you should update all of the
-parent references in the child `project.clj` files. 
+Again, be sure to set the version **before** tagging the release.
+
+To tag the code and release the jar to clojars, just run the command:
+
+    lein release :patch
+
+This will do everything necessary and will bump the patch version of
+the artifact at the end of the process. You will be prompted for the
+passphrase of the GPG key.
+
+After releasing a new version on clojars, you should check that the
+jar is available from clojars and then communicate the availability of
+the new release to the coordinators of dependent components.
 
 # Troubleshooting
 
@@ -70,6 +84,9 @@ GitHub repository as well.  Be sure to:
 
 If any changes were pushed to GitHub, then you'll need to do the same
 for the remote repository.
+
+If artifacts were pushed to clojars, then you'll have to tag a new
+release rather than trying to re-release the botched tag.
 
 Before trying again, verify that you've performed all the setup. 
 
