@@ -35,7 +35,7 @@ key. If you run into an error like the following:
 The problem is with the TTY that GPG is trying to use and usually
 means that the above environmental variable is not set.
 
-# Release
+## Release
 
 **Before** creating the release:
 
@@ -71,24 +71,22 @@ After releasing a new version on clojars, you should check that the
 jar is available from clojars and then communicate the availability of
 the new release to the coordinators of dependent components.
 
-# Troubleshooting
+## Contributing
 
-Sadly, something's gone wrong.
+Before adding new dependencies or removing existing ones, discuss with
+other developers, especially from those that depend on this
+`project.clj` file.  Generally try to minimize the number of
+dependencies and choose a single library for a given functionality.
 
-You'll need to clean up your local repository and potentially the
-GitHub repository as well.  Be sure to:
+When updating versions, use your best judgement on whether the change
+is likely to cause an issue with other components.  If there is a
+doubt, then discuss the changes.  In any case, test changes with other
+components when possible.
 
- * Reset your history to remove any changes that Leiningen made in the
-   release process.
- * Manually delete the tag that was created.
-
-If any changes were pushed to GitHub, then you'll need to do the same
-for the remote repository.
-
-If artifacts were pushed to clojars, then you'll have to tag a new
-release rather than trying to re-release the botched tag.
-
-Before trying again, verify that you've performed all the setup. 
+Please keep the dependencies in the `project.clj` file
+alphabetized. Ensure that the file uses the standard clojure
+formatting (with aligned maps) provided by the IntelliJ Cursive
+plugin. 
 
 ## Copyright
 
