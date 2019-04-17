@@ -3,7 +3,15 @@
 A parent `project.clj` file to centrally manage repositories and
 dependencies for Nuvla Clojure(Script) modules.
 
-## Setup
+## Artifacts
+
+ - `sixsq.nuvla/parent` jar file: Jar file containing common
+   dependencies for Clojure(Script) components.  Available from
+   [clojars](https://clojars.org/sixsq.nuvla/parent).
+
+## Release Process
+
+### Setup 
 
 To build and release this `project.clj` file to
 [clojars](https://clojars.org), you must setup your environment
@@ -35,7 +43,7 @@ key. If you run into an error like the following:
 The problem is with the TTY that GPG is trying to use and usually
 means that the above environmental variable is not set.
 
-## Release
+### Publishing to Clojars
 
 **Before** creating the release:
 
