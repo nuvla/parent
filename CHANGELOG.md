@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [6.5.0] - 2019-04-24
+
+### Changed
+
+  - Replace Joda-time by Java-time
+  - update shadowcljs deps
+
 ## [6.4.0] - 2019-04-17
 
 ### Changed

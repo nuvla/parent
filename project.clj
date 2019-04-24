@@ -1,6 +1,6 @@
 (def es-version "7.0.0")
 
-(defproject sixsq.nuvla/parent "6.4.1-SNAPSHOT"
+(defproject sixsq.nuvla/parent "6.5.0-SNAPSHOT"
 
   :description "parent project file for Nuvla modules"
 
@@ -60,9 +60,9 @@
    [clj-commons/secretary "1.2.4"]                          ;; patched version for clojurescript 1.10.439
    [clj-http "3.9.1"]
    [clj-stacktrace "0.2.8"]
-   [clj-time "0.15.1"]
+   [clojure.java-time "0.3.2"]
    [compojure "1.6.1"]
-   [com.amazonaws/aws-java-sdk-s3 "1.11.534"]
+   [com.amazonaws/aws-java-sdk-s3 "1.11.538"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.3"]
@@ -77,9 +77,6 @@
 
    [environ "1.1.0"]
    [expound "0.7.2"]
-
-   ;; version 2.0.0 causes compilation warnings, check before upgrade
-   [funcool/promesa "1.9.0"]
 
    [instaparse "1.4.10"]
    [io.nervous/kvlt "0.1.5-20180119.082733-5"
@@ -145,14 +142,14 @@
    [clojure-complete "0.2.5" :scope "test"
     :exclusions [org.clojure/clojure]]
 
-   [com.google.javascript/closure-compiler-unshaded "v20190301"]
+   [com.google.javascript/closure-compiler-unshaded "v20190415"]
 
    ;; cljs testing; control options here
    [doo "0.1.11" :scope "test"]
 
    [peridot "0.5.1" :scope "test"]
 
-   [thheller/shadow-cljs "2.8.15"]
+   [thheller/shadow-cljs "2.8.33"]
    ]
 
   :repositories
