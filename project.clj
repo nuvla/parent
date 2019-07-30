@@ -1,6 +1,6 @@
 (def es-version "7.0.0")
 
-(defproject sixsq.nuvla/parent "6.5.2-SNAPSHOT"
+(defproject sixsq.nuvla/parent "6.6.0-SNAPSHOT"
 
   :description "parent project file for Nuvla modules"
 
@@ -51,28 +51,24 @@
    ;; netty conflict with elasticsearch
    [aleph "0.4.6"]
 
-   [buddy/buddy-core "1.5.0"]
-   [buddy/buddy-hashers "1.3.0"]
-   [buddy/buddy-sign "3.0.0"]
+   [buddy/buddy-core "1.6.0"]
+   [buddy/buddy-hashers "1.4.0"]
+   [buddy/buddy-sign "3.1.0"]
 
-   [cc.qbits/spandex "0.7.0"]
+   [cc.qbits/spandex "0.7.1"]
    [cheshire "5.8.1"]                                       ;; newer, explicit version needed by ring-json
    [clj-commons/secretary "1.2.4"]                          ;; patched version for clojurescript 1.10.439
    [clj-http "3.10.0"]
    [clj-stacktrace "0.2.8"]
    [clojure.java-time "0.3.2"]
    [compojure "1.6.1"]
-   [com.amazonaws/aws-java-sdk-s3 "1.11.583"]
+   [com.amazonaws/aws-java-sdk-s3 "1.11.601"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.3"]
    [com.rpl/specter "1.1.2"]
-   [com.taoensso/tempura "1.2.1"]
    [org.clojure/tools.reader "1.3.2"]
 
-   [com.taoensso/timbre "4.10.0"]
-
-   [day8.re-frame/http-fx "0.1.6"]
    [duratom "0.4.3"]
 
    [environ "1.1.0"]
@@ -88,16 +84,16 @@
                  com.sun.jdmk/jmxtools
                  com.sun.jmx/jmxri]]
 
-   [org.apache.logging.log4j/log4j-core "2.11.2"]
-   [org.apache.logging.log4j/log4j-api "2.11.2"]
-   [org.apache.logging.log4j/log4j-web "2.11.2"]
+   [org.apache.logging.log4j/log4j-core "2.12.0"]
+   [org.apache.logging.log4j/log4j-api "2.12.0"]
+   [org.apache.logging.log4j/log4j-web "2.12.0"]
    [org.apache.httpcomponents/httpclient "4.5.9"]           ; force version used by clj-http
    [org.slf4j/slf4j-simple "1.7.26"]
 
    [me.raynes/fs "1.4.6"]
    [metosin/spec-tools "0.10.0"]
 
-   [org.clojure/tools.logging "0.4.1"]
+   [org.clojure/tools.logging "0.5.0"]
    [org.clojure/tools.namespace "0.3.0"]
    [org.clojure/data.json "0.2.6"]
    [org.clojure/java.classpath "0.3.0"]
@@ -118,8 +114,6 @@
    ;; https://curator.apache.org/zk-compatibility.html
    [org.apache.curator/curator-test "2.12.0" :scope "test"]
 
-   [reagent "0.8.1"]
-   [re-frame "0.10.7"]
    [ring "1.7.1"]
    [ring/ring-core "1.7.1" :exclusions [commons-io]]        ; clj-http needs a more recent version
    [ring/ring-codec "1.1.2"]
@@ -129,7 +123,7 @@
    [zookeeper-clj "0.9.4"]
 
    ;; when upgrading beyond 3.4.x, update curator version above
-   [org.apache.zookeeper/zookeeper "3.4.14"
+   [org.apache.zookeeper/zookeeper "3.5.5"
     :exclusions [jline
                  org.slf4j/slf4j-api
                  org.slf4j/slf4j-log4j12]]
@@ -137,7 +131,6 @@
    ;;
    ;; libraries and utilities for testing
    ;;
-   [binaryage/devtools "0.9.10" :scope "test"]
 
    [clojure-complete "0.2.5" :scope "test"
     :exclusions [org.clojure/clojure]]
@@ -149,7 +142,6 @@
 
    [peridot "0.5.1" :scope "test"]
 
-   [thheller/shadow-cljs "2.8.39"]
    ]
 
   :repositories
