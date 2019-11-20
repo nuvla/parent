@@ -1,6 +1,6 @@
 (def es-version "7.0.0")
 
-(defproject sixsq.nuvla/parent "6.6.1-SNAPSHOT"
+(defproject sixsq.nuvla/parent "6.7.0-SNAPSHOT"
 
   :description "parent project file for Nuvla modules"
 
@@ -40,7 +40,7 @@
    ;;
 
    [org.clojure/clojure "1.10.1"]
-   [org.clojure/clojurescript "1.10.520"]
+   [org.clojure/clojurescript "1.10.597"]
 
    ;;
    ;; general dependencies
@@ -56,20 +56,20 @@
    [buddy/buddy-sign "3.1.0"]
 
    [cc.qbits/spandex "0.7.1"]
-   [cheshire "5.8.1"]                                       ;; newer, explicit version needed by ring-json
+   [cheshire "5.9.0"]                                       ;; newer, explicit version needed by ring-json
    [clj-commons/secretary "1.2.4"]                          ;; patched version for clojurescript 1.10.439
    [clj-http "3.10.0"]
    [clj-stacktrace "0.2.8"]
    [clojure.java-time "0.3.2"]
    [compojure "1.6.1"]
-   [com.amazonaws/aws-java-sdk-s3 "1.11.601"]
+   [com.amazonaws/aws-java-sdk-s3 "1.11.678"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.3"]
-   [com.rpl/specter "1.1.2"]
+   [com.rpl/specter "1.1.3"]
    [org.clojure/tools.reader "1.3.2"]
 
-   [duratom "0.4.3"]
+   [duratom "0.4.9"]
 
    [environ "1.1.0"]
    [expound "0.7.2"]
@@ -84,46 +84,41 @@
                  com.sun.jdmk/jmxtools
                  com.sun.jmx/jmxri]]
 
-   [org.apache.logging.log4j/log4j-core "2.12.0"]
-   [org.apache.logging.log4j/log4j-api "2.12.0"]
-   [org.apache.logging.log4j/log4j-web "2.12.0"]
-   [org.apache.httpcomponents/httpclient "4.5.9"]           ; force version used by clj-http
-   [org.slf4j/slf4j-simple "1.7.26"]
+   [org.apache.logging.log4j/log4j-core "2.12.1"]
+   [org.apache.logging.log4j/log4j-api "2.12.1"]
+   [org.apache.logging.log4j/log4j-web "2.12.1"]
+   [org.apache.httpcomponents/httpclient "4.5.10"]           ; force version used by clj-http
+   [org.slf4j/slf4j-simple "1.7.29"]
 
    [me.raynes/fs "1.4.6"]
    [metosin/spec-tools "0.10.0"]
 
    [org.clojure/tools.logging "0.5.0"]
-   [org.clojure/tools.namespace "0.3.0"]
-   [org.clojure/data.json "0.2.6"]
+   [org.clojure/tools.namespace "0.3.1"]
+   [org.clojure/data.json "0.2.7"]
    [org.clojure/java.classpath "0.3.0"]
-   [org.clojure/core.async "0.4.500" :exclusions [org.clojure/tools.reader]]
-   [org.clojure/test.check "0.9.0" :scope "test"]
+   [org.clojure/core.async "0.5.527" :exclusions [org.clojure/tools.reader]]
+   [org.clojure/test.check "0.10.0" :scope "test"]
    [org.elasticsearch/elasticsearch ~es-version]
    [org.elasticsearch.client/transport ~es-version]
    [org.elasticsearch.plugin/transport-netty4-client ~es-version]
    [org.elasticsearch.test/framework ~es-version
     :exclusions [com.carrotsearch.randomizedtesting/randomizedtesting-runner]]
 
-   [org.slf4j/slf4j-api "1.7.26"]
-   [org.slf4j/slf4j-log4j12 "1.7.26"]
+   [org.slf4j/slf4j-api "1.7.29"]
+   [org.slf4j/slf4j-log4j12 "1.7.29"]
 
-   ;; version 2.12.0 must be specified when using zookeeper
-   ;; v3.4.x.  Upgrades beyond that may allow/require a
-   ;; new version of curator-test. See:
-   ;; https://curator.apache.org/zk-compatibility.html
-   [org.apache.curator/curator-test "2.12.0" :scope "test"]
+   [org.apache.curator/curator-test "4.2.0" :scope "test"]
 
-   [ring "1.7.1"]
-   [ring/ring-core "1.7.1" :exclusions [commons-io]]        ; clj-http needs a more recent version
+   [ring "1.8.0"]
+   [ring/ring-core "1.8.0" :exclusions [commons-io]]        ; clj-http needs a more recent version
    [ring/ring-codec "1.1.2"]
-   [ring/ring-json "0.4.0"]
+   [ring/ring-json "0.5.0"]
    [ring/ring-defaults "0.3.2"]
 
    [zookeeper-clj "0.9.4"]
 
-   ;; when upgrading beyond 3.4.x, update curator version above
-   [org.apache.zookeeper/zookeeper "3.5.5"
+   [org.apache.zookeeper/zookeeper "3.5.6"
     :exclusions [jline
                  org.slf4j/slf4j-api
                  org.slf4j/slf4j-log4j12]]
@@ -135,12 +130,12 @@
    [clojure-complete "0.2.5" :scope "test"
     :exclusions [org.clojure/clojure]]
 
-   [com.google.javascript/closure-compiler-unshaded "v20190618"]
+   [com.google.javascript/closure-compiler-unshaded "v20191027"]
 
    ;; cljs testing; control options here
    [doo "0.1.11" :scope "test"]
 
-   [peridot "0.5.1" :scope "test"]
+   [peridot "0.5.2" :scope "test"]
 
    ]
 

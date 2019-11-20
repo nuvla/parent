@@ -1,5 +1,55 @@
 # Changelog
 
+## [6.7.0] - 2019-11-20
+
+### Changed
+
+  - Dependencies updated:
+    -   [cheshire "5.8.1"]
+    +   [cheshire "5.9.0"]
+    -   [com.amazonaws/aws-java-sdk-s3 "1.11.601"]
+    +   [com.amazonaws/aws-java-sdk-s3 "1.11.678"]
+    -   [com.rpl/specter "1.1.2"]
+    +   [com.rpl/specter "1.1.3"]
+    -   [duratom "0.4.3"]
+    +   [duratom "0.4.9"]
+    -   [org.apache.logging.log4j/log4j-core "2.12.0"]
+    +   [org.apache.logging.log4j/log4j-core "2.12.1"]
+    -   [org.apache.logging.log4j/log4j-api "2.12.0"]
+    +   [org.apache.logging.log4j/log4j-api "2.12.1"]
+    -   [org.apache.logging.log4j/log4j-web "2.12.0"]
+    +   [org.apache.logging.log4j/log4j-web "2.12.1"]
+    -   [org.apache.httpcomponents/httpclient "4.5.9"]
+    +   [org.apache.httpcomponents/httpclient "4.5.10"]
+    -   [org.slf4j/slf4j-simple "1.7.26"]
+    +   [org.slf4j/slf4j-simple "1.7.29"]
+    -   [org.clojure/tools.namespace "0.3.0"]
+    +   [org.clojure/tools.namespace "0.3.1"]
+    -   [org.clojure/data.json "0.2.6"]
+    +   [org.clojure/data.json "0.2.7"]
+    -   [org.clojure/core.async "0.4.500"]
+    +   [org.clojure/core.async "0.5.527"]
+    -   [org.clojure/test.check "0.9.0"]
+    +   [org.clojure/test.check "0.10.0"]
+    -   [org.slf4j/slf4j-api "1.7.26"]
+    +   [org.slf4j/slf4j-api "1.7.29"]
+    -   [org.slf4j/slf4j-log4j12 "1.7.26"]
+    +   [org.slf4j/slf4j-log4j12 "1.7.29"]
+    -   [org.apache.curator/curator-test "2.12.0"]
+    +   [org.apache.curator/curator-test "4.2.0"]
+    -   [ring "1.7.1"]
+    +   [ring "1.8.0"]
+    -   [ring/ring-core "1.7.1"]
+    +   [ring/ring-core "1.8.0"]
+    -   [ring/ring-json "0.4.0"]
+    +   [ring/ring-json "0.5.0"]
+    -   [org.apache.zookeeper/zookeeper "3.5.5"]
+    +   [org.apache.zookeeper/zookeeper "3.5.6"]
+    -   [com.google.javascript/closure-compiler-unshaded "v20190618"]
+    +   [com.google.javascript/closure-compiler-unshaded "v20191027"]
+    -   [peridot "0.5.1" :scope "test"]
+    +   [peridot "0.5.2" :scope "test"]
+
 ## [6.6.0] - 2019-07-30
 
 ### Changed
