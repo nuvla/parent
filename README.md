@@ -6,8 +6,9 @@ dependencies for Nuvla Clojure(Script) modules.
 ## Artifacts
 
  - `sixsq.nuvla/parent` jar file: Jar file containing common
-   dependencies for Clojure(Script) components.  Available from
-   [![Clojars Project](https://img.shields.io/clojars/v/sixsq.nuvla/parent.svg)](https://clojars.org/sixsq.nuvla/parent).
+   dependencies for Clojure(Script) components. 
+
+[![Clojars Project](https://img.shields.io/clojars/v/sixsq.nuvla/parent.svg)](https://clojars.org/sixsq.nuvla/parent)
 
 ## Contributing
 
