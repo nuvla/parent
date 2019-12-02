@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.7.1] - 2019-12-02
+
+### Changed
+
+  - Revert to clojurescript "1.10.520" after issue 
+    found in nuvla clojure library on firefox
+
 ## [6.7.0] - 2019-11-20
 
 ### Changed

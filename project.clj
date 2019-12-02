@@ -40,7 +40,7 @@
    ;;
 
    [org.clojure/clojure "1.10.1"]
-   [org.clojure/clojurescript "1.10.597"]
+   [org.clojure/clojurescript "1.10.520"]
 
    ;;
    ;; general dependencies
