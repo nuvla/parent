@@ -1,5 +1,11 @@
 # Changelog
 
+## [6.7.2] - 2019-12-02
+
+### Changed
+
+  - Revert back to clojurescript "1.10.597" the issue was'nt there
+ 
 ## [6.7.1] - 2019-12-02
 
 ### Changed
