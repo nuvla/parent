@@ -1,5 +1,16 @@
 # Changelog
 
+## [6.7.3] - 2020-03-23
+
+### Added
+
+  - [clj-commons/clj-yaml "0.7.0"]
+
+### Changed
+
+  - Dependencies updated
+ 
+
 ## [6.7.2] - 2019-12-02
 
 ### Changed
