@@ -1,6 +1,6 @@
 (def es-version "7.0.0")
 
-(defproject sixsq.nuvla/parent "6.7.3"
+(defproject sixsq.nuvla/parent "6.7.4-SNAPSHOT"
 
   :description "parent project file for Nuvla modules"
 
