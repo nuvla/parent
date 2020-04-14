@@ -63,7 +63,7 @@
    [clj-stacktrace "0.2.8"]
    [clojure.java-time "0.3.2"]
    [compojure "1.6.1"]
-   [com.amazonaws/aws-java-sdk-s3 "1.11.678"]
+   [com.amazonaws/aws-java-sdk-s3 "1.11.749"]
    [joda-time/joda-time "2.10.5"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
