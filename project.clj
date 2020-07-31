@@ -40,7 +40,7 @@
    ;;
 
    [org.clojure/clojure "1.10.1"]
-   [org.clojure/clojurescript "1.10.597"]
+   [org.clojure/clojurescript "1.10.773"]
 
    ;;
    ;; general dependencies
@@ -55,25 +55,25 @@
    [buddy/buddy-hashers "1.4.0"]
    [buddy/buddy-sign "3.1.0"]
 
-   [cc.qbits/spandex "0.7.4"]
+   [cc.qbits/spandex "0.7.5"]
    [cheshire "5.10.0"]                                      ;; newer, explicit version needed by ring-json
-   [clj-commons/clj-yaml "0.7.0"]
+   [clj-commons/clj-yaml "0.7.1"]
    [clj-commons/secretary "1.2.4"]
-   [clj-http "3.10.0"]
+   [clj-http "3.10.1"]
    [clj-stacktrace "0.2.8"]
    [clojure.java-time "0.3.2"]
    [compojure "1.6.1"]
-   [com.amazonaws/aws-java-sdk-s3 "1.11.749"]
+   [com.amazonaws/aws-java-sdk-s3 "1.11.831"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.3"]
    [com.rpl/specter "1.1.3"]
    [org.clojure/tools.reader "1.3.2"]
 
-   [duratom "0.5.1"]
+   [duratom "0.5.2"]
 
-   [environ "1.1.0"]
-   [expound "0.8.4"]
+   [environ "1.2.0"]
+   [expound "0.8.5"]
 
    [instaparse "1.4.10"]
    [io.nervous/kvlt "0.1.5-20180119.082733-5"
@@ -85,21 +85,21 @@
                  com.sun.jdmk/jmxtools
                  com.sun.jmx/jmxri]]
 
-   [org.apache.logging.log4j/log4j-core "2.13.1"]
-   [org.apache.logging.log4j/log4j-api "2.13.1"]
-   [org.apache.logging.log4j/log4j-web "2.13.1"]
+   [org.apache.logging.log4j/log4j-core "2.13.3"]
+   [org.apache.logging.log4j/log4j-api "2.13.3"]
+   [org.apache.logging.log4j/log4j-web "2.13.3"]
    [org.apache.httpcomponents/httpclient "4.5.12"]          ; force version used by clj-http
    [org.slf4j/slf4j-simple "1.7.30"]
 
    [me.raynes/fs "1.4.6"]
    [metosin/spec-tools "0.10.1"]
 
-   [org.clojure/tools.logging "1.0.0"]
+   [org.clojure/tools.logging "1.1.0"]
    [org.clojure/tools.namespace "1.0.0"]
-   [org.clojure/data.json "0.2.7"]
-   [org.clojure/java.classpath "0.3.0"]
-   [org.clojure/core.async "1.0.567" :exclusions [org.clojure/tools.reader]]
-   [org.clojure/test.check "1.0.0" :scope "test"]
+   [org.clojure/data.json "1.0.0"]
+   [org.clojure/java.classpath "1.0.0"]
+   [org.clojure/core.async "1.3.610" :exclusions [org.clojure/tools.reader]]
+   [org.clojure/test.check "1.1.0" :scope "test"]
    [org.elasticsearch/elasticsearch ~es-version]
    [org.elasticsearch.client/transport ~es-version]
    [org.elasticsearch.plugin/transport-netty4-client ~es-version]
@@ -109,17 +109,17 @@
    [org.slf4j/slf4j-api "1.7.30"]
    [org.slf4j/slf4j-log4j12 "1.7.30"]
 
-   [org.apache.curator/curator-test "4.2.0" :scope "test"]
+   [org.apache.curator/curator-test "5.1.0" :scope "test"]
 
-   [ring "1.8.0"]
-   [ring/ring-core "1.8.0" :exclusions [commons-io]]        ; clj-http needs a more recent version
+   [ring "1.8.1"]
+   [ring/ring-core "1.8.1" :exclusions [commons-io]]        ; clj-http needs a more recent version
    [ring/ring-codec "1.1.2"]
    [ring/ring-json "0.5.0"]
    [ring/ring-defaults "0.3.2"]
 
    [zookeeper-clj "0.9.4"]
 
-   [org.apache.zookeeper/zookeeper "3.5.6"
+   [org.apache.zookeeper/zookeeper "3.6.1"
     :exclusions [jline
                  org.slf4j/slf4j-api
                  org.slf4j/slf4j-log4j12]]
@@ -131,12 +131,12 @@
    [clojure-complete "0.2.5" :scope "test"
     :exclusions [org.clojure/clojure]]
 
-   [com.google.javascript/closure-compiler-unshaded "v20191027"]
+   [com.google.javascript/closure-compiler-unshaded "v20200628"]
 
    ;; cljs testing; control options here
    [doo "0.1.11" :scope "test"]
 
-   [peridot "0.5.2" :scope "test"]
+   [peridot "0.5.3" :scope "test"]
 
    ]
 

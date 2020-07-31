@@ -1,5 +1,11 @@
 # Changelog
 
+## [6.7.4] - 2020-07-31
+
+### Changed
+
+  - Dependencies updated
+
 ## [6.7.3] - 2020-03-23
 
 ### Added
