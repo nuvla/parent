@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [6.7.6] - 2022-03-23
+
 ### Added
 
   - Added static code analysis plugins. 
