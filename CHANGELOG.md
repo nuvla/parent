@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+  - Added static code analysis plugins. 
+
 ## [6.7.5] - 2021-05-27
 
 ### Changed
