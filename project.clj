@@ -10,8 +10,7 @@
             :url          "http://www.apache.org/licenses/LICENSE-2.0"
             :distribution :repo}
 
-  :plugins [[jonase/eastwood "0.4.3"]
-            [lein-ancient "1.0.0-RC3"]
+  :plugins [[lein-ancient "1.0.0-RC3"]
             [lein-kibit "0.1.8"]
             [jonase/eastwood "1.2.2"]
             [lein-cloverage "1.2.2"]
