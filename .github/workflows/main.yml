@@ -55,17 +55,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
-      - uses: s4u/maven-settings-action@v2.2.0
-        with:
-          githubServer: false
-          override: true
-          servers: |
-            [{
-                "id": "docker.io",
-                "username": "${{ secrets.SIXSQ_DOCKER_USERNAME }}",
-                "password": "${{ secrets.SIXSQ_DOCKER_PASSWORD }}"
-            }]
-
       - name: Validate builds with Leiningen
         run: lein install
 
