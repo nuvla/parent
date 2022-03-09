@@ -173,4 +173,6 @@
                 :snapshots     false
                 :sign-releases false
                 :checksum      :fail
-                :update        :daily}]])
+                :update        :daily}]]
+
+  :profiles {:dev {:dependencies [[clj-kondo "RELEASE"]]}})
