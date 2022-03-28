@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [6.7.7] - 2022-03-28
+
 ### Changed
 
   - Dependencies updated
