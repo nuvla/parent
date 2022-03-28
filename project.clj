@@ -42,16 +42,14 @@
    ;; core languages
    ;;
 
-   [org.clojure/clojure "1.11.0"]
-   [org.clojure/clojurescript "1.11.4"]
+   [org.clojure/clojure "1.10.3"]
+   [org.clojure/clojurescript "1.10.914"]
 
    ;;
    ;; general dependencies
    ;; (please keep these in alphabetical order)
    ;;
 
-   ;; be careful of upgrading; newer versions have a
-   ;; netty conflict with elasticsearch
    [aleph "0.4.7"]
 
    [buddy/buddy-core "1.10.413"]
@@ -59,7 +57,7 @@
    [buddy/buddy-sign "3.4.333"]
 
    [cc.qbits/spandex "0.7.10"]
-   [cheshire "5.10.2"]                                      ;; newer, explicit version needed by ring-json
+   [cheshire "5.10.2"]
    [clj-commons/clj-yaml "0.7.108"]
    [clj-commons/secretary "1.2.4"]
    [clj-http "3.12.3"]
