@@ -90,7 +90,6 @@
    [org.apache.logging.log4j/log4j-api "2.17.2"]
    [org.apache.logging.log4j/log4j-web "2.17.2"]
    [org.apache.httpcomponents/httpclient "4.5.13"]          ; force version used by clj-http
-   [org.slf4j/slf4j-simple "1.7.36"]
 
    [me.raynes/fs "1.4.6"]
    [metosin/spec-tools "0.10.5"]
@@ -109,6 +108,7 @@
 
    [org.slf4j/slf4j-api "1.7.36"]
    [org.slf4j/slf4j-log4j12 "1.7.36"]
+   [org.slf4j/slf4j-simple "1.7.36"]
 
    [org.apache.curator/curator-test "5.2.1" :scope "test"]
 
@@ -121,9 +121,11 @@
    [zookeeper-clj "0.9.4"]
 
    [org.apache.zookeeper/zookeeper "3.8.0"
-    :exclusions [jline
-                 org.slf4j/slf4j-api
-                 org.slf4j/slf4j-log4j12]]
+    :exclusions [ch.qos.logback/logback-classic
+                 ch.qos.logback/logback-core
+                 io.netty/netty-handler
+                 io.netty/netty-tcnative
+                 io.netty/netty-transport-native-epoll]]
 
    ;;
    ;; libraries and utilities for testing

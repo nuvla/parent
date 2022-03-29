@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [6.7.8] - 2022-03-29
+
+### Changed
+
+- Zookeeper dependency fix exclusion
+
 ## [6.7.7] - 2022-03-28
 
 ### Changed
