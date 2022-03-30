@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### Changed
+
+- Upgrade to clojure/clojurescript 1.11
+- Exclude netty from Aleph
+
 ## [6.7.8] - 2022-03-29
 
 ### Changed

@@ -42,15 +42,24 @@
    ;; core languages
    ;;
 
-   [org.clojure/clojure "1.10.3"]
-   [org.clojure/clojurescript "1.10.914"]
+   [org.clojure/clojure "1.11.0"]
+   [org.clojure/clojurescript "1.11.4"]
 
    ;;
    ;; general dependencies
    ;; (please keep these in alphabetical order)
    ;;
 
-   [aleph "0.4.7"]
+   [aleph "0.4.7"
+    :exclusions [io.netty/netty-buffer
+                 io.netty/netty-codec
+                 io.netty/netty-handler
+                 io.netty/netty-resolver
+                 io.netty/netty-transport
+                 io.netty/netty-codec-http
+                 io.netty/netty-handler-proxy
+                 io.netty/netty-resolver-dns
+                 io.netty/netty-transport-native-epoll]]
 
    [buddy/buddy-core "1.10.413"]
    [buddy/buddy-hashers "1.8.158"]
