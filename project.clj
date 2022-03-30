@@ -1,5 +1,3 @@
-(def es-version "7.0.0")
-
 (defproject sixsq.nuvla/parent "6.7.10-SNAPSHOT"
 
   :description "parent project file for Nuvla modules"
@@ -50,16 +48,7 @@
    ;; (please keep these in alphabetical order)
    ;;
 
-   [aleph "0.4.7"
-    :exclusions [io.netty/netty-buffer
-                 io.netty/netty-codec
-                 io.netty/netty-handler
-                 io.netty/netty-resolver
-                 io.netty/netty-transport
-                 io.netty/netty-codec-http
-                 io.netty/netty-handler-proxy
-                 io.netty/netty-resolver-dns
-                 io.netty/netty-transport-native-epoll]]
+   [aleph "0.4.7"]
 
    [buddy/buddy-core "1.10.413"]
    [buddy/buddy-hashers "1.8.158"]
@@ -109,10 +98,8 @@
    [org.clojure/java.classpath "1.0.0"]
    [org.clojure/core.async "1.5.648" :exclusions [org.clojure/tools.reader]]
    [org.clojure/test.check "1.1.1" :scope "test"]
-   [org.elasticsearch/elasticsearch ~es-version]
-   [org.elasticsearch.client/transport ~es-version]
-   [org.elasticsearch.plugin/transport-netty4-client ~es-version]
-   [org.elasticsearch.test/framework ~es-version
+   [org.elasticsearch.client/transport "7.0.0"]
+   [org.elasticsearch.test/framework "7.0.0"
     :exclusions [com.carrotsearch.randomizedtesting/randomizedtesting-runner]]
 
    [org.slf4j/slf4j-api "1.7.36"]
