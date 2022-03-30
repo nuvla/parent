@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [6.7.9] - 2022-03-30
+
 ### Changed
 
 - Upgrade to clojure/clojurescript 1.11
