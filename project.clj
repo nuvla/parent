@@ -40,7 +40,9 @@
    ;; core languages
    ;;
 
-   [org.clojure/clojure "1.11.0"]
+   ;; Do not update to clojure 1.11.0 for the moment.
+   ;; This will make IDE repl fail to run tests for api-server-private.
+   [org.clojure/clojure "1.10.3"]
    [org.clojure/clojurescript "1.11.4"]
 
    ;;
@@ -48,7 +50,10 @@
    ;; (please keep these in alphabetical order)
    ;;
 
-   [aleph "0.4.7"]
+   ;; Do not update to aleph 0.4.7. This will make impossible to
+   ;; start api-server-private in a repl
+   ;; Conflicts with elasticsearch test framework
+   [aleph "0.4.6"]
 
    [buddy/buddy-core "1.10.413"]
    [buddy/buddy-hashers "1.8.158"]

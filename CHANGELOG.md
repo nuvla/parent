@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [6.7.11] - 2022-04-06
+
+- Downgrade to aleph 0.4.6
+- Downgrade to clojure/clojurescript 1.10.3
+
 ## [6.7.10] - 2022-03-30
 
 ### Changed
