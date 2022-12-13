@@ -119,7 +119,7 @@
    [ring/ring-json "0.5.1"]
    [ring/ring-defaults "0.3.3"]
 
-   [zookeeper-clj "0.9.4"]
+   [zookeeper-clj "0.9.4" :exclusions [[org.slf4j/slf4j-log4j12]]]
 
    [org.apache.zookeeper/zookeeper "3.8.0"
     :exclusions [ch.qos.logback/logback-classic
