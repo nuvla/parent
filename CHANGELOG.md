@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [6.7.12] - 2022-12-16
+
 - Exclude slf4j-log4j12 from zookeeper-clj as it clashes with one provided by 
   the project
 
