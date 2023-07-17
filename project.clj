@@ -10,12 +10,12 @@
 
   :plugins [[lein-ancient "1.0.0-RC3"]
             [lein-kibit "0.1.8"]
-            [jonase/eastwood "1.2.2"]
-            [lein-cloverage "1.2.2"]
-            [com.github.clj-kondo/lein-clj-kondo "0.1.3"]
-            [lein-nvd "1.9.0"]
+            [jonase/eastwood "1.4.0"]
+            [lein-cloverage "1.2.4"]
+            [com.github.clj-kondo/lein-clj-kondo "2023.07.13"]
+            [lein-nvd "2.0.0"]
             [lein-nsorg "0.3.0"]
-            [s3-wagon-private "1.3.2"]
+            [s3-wagon-private "1.3.5"]
             [lein-shell "0.5.0"]]
 
   :filespecs [{:type :path
