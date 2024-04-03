@@ -40,46 +40,35 @@
    ;; core languages
    ;;
 
-   ;; Do not update to clojure 1.11.0 for the moment.
-   ;; This will make IDE repl fail to run tests for api-server-private.
-   [org.clojure/clojure "1.10.3"]
+   [org.clojure/clojure "1.11.2"]
    [org.clojure/clojurescript "1.11.4"]
 
    ;;
    ;; general dependencies
    ;; (please keep these in alphabetical order)
    ;;
+   [aleph "0.7.1"]
 
-   ;; Do not update to aleph 0.4.7. This will make impossible to
-   ;; start api-server-private in a repl
-   ;; Conflicts with elasticsearch test framework
-   [aleph "0.4.6"]
-
-   [buddy/buddy-core "1.10.413"]
-   [buddy/buddy-hashers "1.8.158"]
-   [buddy/buddy-sign "3.4.333"]
-
-   [cc.qbits/spandex "0.7.10"]
-   [cheshire "5.10.2"]
-   [clj-commons/clj-yaml "0.7.108"]
+   [buddy/buddy-core "1.11.423"]
+   [buddy/buddy-hashers "2.0.167"]
+   [buddy/buddy-sign "3.5.351"]
+   [cheshire "5.13.0"]
+   [clj-commons/clj-yaml "1.0.27"]
    [clj-commons/secretary "1.2.4"]
    [clj-http "3.12.3"]
    [clj-stacktrace "0.2.8"]
-   [clojure.java-time "0.3.3"]
-   [compojure "1.6.2"]
-   [com.amazonaws/aws-java-sdk-s3 "1.12.186"]
    [com.cemerick/url "0.1.1"
     :exclusions [com.cemerick/clojurescript.test]]
    [com.draines/postal "2.0.5"]
    [com.rpl/specter "1.1.4"]
-   [org.clojure/tools.reader "1.3.6"]
+   [org.clojure/tools.reader "1.4.1"]
 
-   [duratom "0.5.3"]
+   [duratom "0.5.9"]
 
    [environ "1.2.0"]
    [expound "0.9.0"]
 
-   [instaparse "1.4.10"]
+   [instaparse "1.4.14"]
    [io.nervous/kvlt "0.1.5-20180119.082733-5"
     :exclusions [org.clojure/clojurescript]]
 
@@ -92,20 +81,17 @@
    [org.apache.logging.log4j/log4j-core "2.17.2"]
    [org.apache.logging.log4j/log4j-api "2.17.2"]
    [org.apache.logging.log4j/log4j-web "2.17.2"]
-   [org.apache.httpcomponents/httpclient "4.5.13"]          ; force version used by clj-http
+   [org.apache.httpcomponents/httpclient "4.5.14"]          ; force version used by clj-http
 
    [me.raynes/fs "1.4.6"]
    [metosin/spec-tools "0.10.5"]
 
-   [org.clojure/tools.logging "1.2.4"]
-   [org.clojure/tools.namespace "1.2.0"]
-   [org.clojure/data.json "2.4.0"]
-   [org.clojure/java.classpath "1.0.0"]
-   [org.clojure/core.async "1.5.648" :exclusions [org.clojure/tools.reader]]
+   [org.clojure/tools.logging "1.3.0"]
+   [org.clojure/tools.namespace "1.5.0"]
+   [org.clojure/data.json "2.5.0"]
+   [org.clojure/java.classpath "1.1.0"]
+   [org.clojure/core.async "1.6.681" :exclusions [org.clojure/tools.reader]]
    [org.clojure/test.check "1.1.1" :scope "test"]
-   [org.elasticsearch.client/transport "7.0.0"]
-   [org.elasticsearch.test/framework "7.0.0"
-    :exclusions [com.carrotsearch.randomizedtesting/randomizedtesting-runner]]
 
    [org.slf4j/slf4j-api "1.7.36"]
    [org.slf4j/slf4j-log4j12 "1.7.36"]
@@ -113,11 +99,11 @@
 
    [org.apache.curator/curator-test "5.2.1" :scope "test"]
 
-   [ring "1.9.5"]
-   [ring/ring-core "1.9.5" :exclusions [commons-io]]        ; clj-http needs a more recent version
+   [ring "1.12.1"]
+   [ring/ring-core "1.12.1" :exclusions [commons-io]]        ; clj-http needs a more recent version
    [ring/ring-codec "1.2.0"]
    [ring/ring-json "0.5.1"]
-   [ring/ring-defaults "0.3.3"]
+   [ring/ring-defaults "0.4.0"]
 
    [zookeeper-clj "0.9.4" :exclusions [[org.slf4j/slf4j-log4j12]]]
 
