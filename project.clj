@@ -10,9 +10,9 @@
 
   :plugins [[lein-ancient "1.0.0-RC3"]
             [lein-kibit "0.1.8"]
-            [jonase/eastwood "1.4.0"]
+            [jonase/eastwood "1.4.2"]
             [lein-cloverage "1.2.4"]
-            [com.github.clj-kondo/lein-clj-kondo "2023.07.13"]
+            [com.github.clj-kondo/lein-clj-kondo "2024.03.13"]
             [lein-nvd "2.0.0"]
             [lein-nsorg "0.3.0"]
             [s3-wagon-private "1.3.5"]
@@ -78,13 +78,13 @@
                  com.sun.jdmk/jmxtools
                  com.sun.jmx/jmxri]]
 
-   [org.apache.logging.log4j/log4j-core "2.17.2"]
-   [org.apache.logging.log4j/log4j-api "2.17.2"]
-   [org.apache.logging.log4j/log4j-web "2.17.2"]
+   [org.apache.logging.log4j/log4j-core "2.23.1"]
+   [org.apache.logging.log4j/log4j-api "2.23.1"]
+   [org.apache.logging.log4j/log4j-web "2.23.1"]
    [org.apache.httpcomponents/httpclient "4.5.14"]          ; force version used by clj-http
 
    [me.raynes/fs "1.4.6"]
-   [metosin/spec-tools "0.10.5"]
+   [metosin/spec-tools "0.10.6"]
 
    [org.clojure/tools.logging "1.3.0"]
    [org.clojure/tools.namespace "1.5.0"]
@@ -93,11 +93,11 @@
    [org.clojure/core.async "1.6.681" :exclusions [org.clojure/tools.reader]]
    [org.clojure/test.check "1.1.1" :scope "test"]
 
-   [org.slf4j/slf4j-api "1.7.36"]
-   [org.slf4j/slf4j-log4j12 "1.7.36"]
-   [org.slf4j/slf4j-simple "1.7.36"]
+   [org.slf4j/slf4j-api "2.0.12"]
+   [org.slf4j/slf4j-log4j12 "2.0.12"]
+   [org.slf4j/slf4j-simple "2.0.12"]
 
-   [org.apache.curator/curator-test "5.2.1" :scope "test"]
+   [org.apache.curator/curator-test "5.6.0" :scope "test"]
 
    [ring "1.12.1"]
    [ring/ring-core "1.12.1" :exclusions [commons-io]]        ; clj-http needs a more recent version
@@ -105,9 +105,9 @@
    [ring/ring-json "0.5.1"]
    [ring/ring-defaults "0.4.0"]
 
-   [zookeeper-clj "0.9.4" :exclusions [[org.slf4j/slf4j-log4j12]]]
+   [zookeeper-clj "0.11.0" :exclusions [[org.slf4j/slf4j-log4j12]]]
 
-   [org.apache.zookeeper/zookeeper "3.8.0"
+   [org.apache.zookeeper/zookeeper "3.9.2"
     :exclusions [ch.qos.logback/logback-classic
                  ch.qos.logback/logback-core
                  io.netty/netty-handler
