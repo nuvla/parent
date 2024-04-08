@@ -1,4 +1,4 @@
-(defproject sixsq.nuvla/parent "6.7.16-SNAPSHOT"
+(defproject sixsq.nuvla/parent "6.8.0-SNAPSHOT"
 
   :description "parent project file for Nuvla modules"
 
@@ -12,11 +12,12 @@
             [lein-kibit "0.1.8"]
             [jonase/eastwood "1.4.2"]
             [lein-cloverage "1.2.4"]
-            [com.github.clj-kondo/lein-clj-kondo "2024.03.13"]
             [lein-nvd "2.0.0"]
             [lein-nsorg "0.3.0"]
             [s3-wagon-private "1.3.5"]
-            [lein-shell "0.5.0"]]
+            [lein-shell "0.5.0"]
+            [lein-environ "1.2.0"]
+            [lein-project-version "0.1.0"]]
 
   :filespecs [{:type :path
                :path "./project.clj"}]
@@ -34,6 +35,8 @@
 
   :vcs :git
 
+  ;; managed-dependencies usage deprecated. It's adding more overhead work than helping.
+  ;; declare version directly instead.
   :managed-dependencies
   [
    ;;
@@ -96,6 +99,7 @@
    [org.slf4j/slf4j-api "2.0.12"]
    [org.slf4j/slf4j-log4j12 "2.0.12"]
    [org.slf4j/slf4j-simple "2.0.12"]
+
 
    [org.apache.curator/curator-test "5.6.0" :scope "test"]
 

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## [6.8.0] - 2024-04-08
+
+- Dependencies part of parent deprecated. It's easier to manage versions in each project
+
 ## [6.7.15] - 2024-04-03
 
 - Dependencies upgrade
